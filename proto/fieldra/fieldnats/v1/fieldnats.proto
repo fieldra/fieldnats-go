@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package fieldra.fieldnats.v1;
+
+message ProductCreated {
+  string id = 1;
+  string name = 2;
+  string supplier_id = 3;
+  int64 created_at = 4;
+}
+
+message Event {
+  string name = 1;
+  ProductCreated product = 2;
+}
+
+message SayHelloRequest {
+  string name = 1;
+}
+
+message SayHelloResponse {
+  string message = 1;
+}
